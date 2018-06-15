@@ -45,6 +45,7 @@ def plot(logs, key, agent, dir_to_save_plots, env, window_size, *args, **kwargs)
         plt.show()
         if dir_to_save_plots:
             path = os.path.join(dir_to_save_plots, title)
+            print('save to', path)
             plt.savefig(path)
         plt.clf()
     else:

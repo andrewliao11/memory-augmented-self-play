@@ -12,7 +12,7 @@ from pathlib import Path
 
 def run(logs_path, env=MAZEBASE, dir_to_save_plots=None, last_n=0, window_size=1):
     logs_path = Path(logs_path).resolve()
-    print(logs_path)
+    print('plot:', logs_path)
 
     if (logs_path.is_dir()):
         plot_from_dir(logs_path=logs_path, env=env, dir_to_save_plots=dir_to_save_plots, last_n=last_n, window_size=window_size)
@@ -23,7 +23,8 @@ def run(logs_path, env=MAZEBASE, dir_to_save_plots=None, last_n=0, window_size=1
 if __name__ == '__main__':
     logs_path = None
     config = None
-    window_size = 5000
+    #window_size = 5000
+    window_size = 2
     if (len(sys.argv) == 2):
         logs_path = sys.argv[1]
         config = get_config(use_cmd_config=False)
